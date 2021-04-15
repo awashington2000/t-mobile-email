@@ -7,4 +7,4 @@ dist
 .awspublish*
 config.json
 .git/config
-
+src/assets/img
