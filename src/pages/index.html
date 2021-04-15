@@ -29,8 +29,8 @@ subject: T-Mobile Transactional Email
 
   <row class="">
     <columns class="" large="12" small="12">
-      <p>Hi ANATASIA,</p>
-      <p class="bill-ready-text thin-bottom-border">Your bill for account number XXXXX0629 for billing cycle ending on 1/24/2021 is ready. Feel free to review it <a href="#">here</a> anytime. </p>
+      <p>Hi {{billingInfo.firstName}},</p>
+      <p class="bill-ready-text thin-bottom-border">Your bill for account number XXXXX{{billingInfo.acctNumber}} for billing cycle ending on {{billingInfo.billEndingDate}} is ready. Feel free to review it <a href="#">here</a> anytime. </p>
     </columns>
   </row>
 </container>
@@ -40,11 +40,11 @@ subject: T-Mobile Transactional Email
   <row class="">
     <columns large="6" small="12" class="tmo-balance">
      <p class="tmo-balance-due-date">Balance</p>
-     <p><span style="font-size: 32px; font-weight: 600;">$225.00</span></p>
+     <p><span style="font-size: 32px; font-weight: 600;">${{billingInfo.balance}}</span></p>
     </columns>
     <columns large="6" small="12" class="tmo-due-date">
       <p class="tmo-balance-due-date">Due date</p>
-      <p><span style="font-size: 20px;">2/10/2021</span></p>
+      <p><span style="font-size: 20px;">{{billingInfo.dueDate}}</span></p>
     </columns>
   </row>
 
